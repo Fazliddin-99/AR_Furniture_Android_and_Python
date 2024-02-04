@@ -32,6 +32,6 @@ The project contains of 2 parts: Android mobile app and Python based backend.
     <img src="Images/6.png" alt="6" style="width: 30%; margin: 0 1%;" />
 </div>
 <div style="display: flex; justify-content: center;">
-    <img src="Images/7.jpg" alt="4" style="width: 30%; margin: 0 1%;" />
+    <img src="Images/7.png" alt="7" style="width: 30%; margin: 0 1%;" />
     <img src="Images/architecture.png" alt="Code Architecture" style="width: 30%; margin: 0 1%;" />
 </div>
