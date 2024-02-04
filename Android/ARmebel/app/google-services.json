@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "920539098278",
+    "project_id": "armebel-3c41c",
+    "storage_bucket": "armebel-3c41c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:920539098278:android:4ec130bfd1a0d724a19867",
+        "android_client_info": {
+          "package_name": "com.fazliddin.armebel"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "920539098278-0247km1p6isebe3cof5158qjq65lucq5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKRmt5FwluItiprfkGudE7z0dpIpISmFc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "920539098278-0247km1p6isebe3cof5158qjq65lucq5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

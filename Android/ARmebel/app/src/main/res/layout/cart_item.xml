@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="furniture"
+            type="com.fazliddin.armebel.data.database.models.CartFurniture" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="@color/light_gray"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="4dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/furnitureImage"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="centerCrop"
+                app:imageUrl="@{ furniture.image1 }"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/furnitureTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@{ furniture.name }"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/furnitureImage"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Some furniture" />
+
+            <TextView
+                android:id="@+id/furniturePrice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toStartOf="@+id/minusBtn"
+                app:layout_constraintStart_toStartOf="@+id/furnitureTitle"
+                app:layout_constraintTop_toBottomOf="@+id/furnitureTitle"
+                app:textPrice="@{ furniture.price }"
+                tools:text="2 000 00 so'm" />
+
+            <TextView
+                android:id="@+id/furnitureQuantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:text="@{ String.valueOf(furniture.quantity) }"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/furniturePrice"
+                app:layout_constraintEnd_toStartOf="@+id/plusBtn"
+                app:layout_constraintTop_toTopOf="@+id/furnitureTitle"
+                tools:text="4" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/minusBtn"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginEnd="4dp"
+                android:cropToPadding="false"
+                android:src="@drawable/ic_remove"
+                app:backgroundTint="@color/white"
+                app:fabCustomSize="32dp"
+                app:layout_constraintBottom_toBottomOf="@+id/furnitureQuantity"
+                app:layout_constraintEnd_toStartOf="@+id/furnitureQuantity"
+                app:layout_constraintTop_toTopOf="@+id/furnitureQuantity"
+                app:useCompatPadding="false" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/plusBtn"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:cropToPadding="false"
+                android:src="@drawable/ic_add"
+                app:backgroundTint="@color/white"
+                app:fabCustomSize="32dp"
+                app:layout_constraintBottom_toBottomOf="@+id/furnitureQuantity"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/furnitureQuantity"
+                app:useCompatPadding="false" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

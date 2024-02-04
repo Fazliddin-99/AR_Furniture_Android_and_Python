@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/startScreenFragment">
+
+    <fragment
+        android:id="@+id/startScreenFragment"
+        android:name="com.fazliddin.armebel.presentation.ui.startscreen.StartScreenFragment"
+        android:label="StartScreenFragment">
+        <action
+            android:id="@+id/action_startScreenFragment_to_furnitureDetailsFragment"
+            app:destination="@id/furnitureDetailsFragment" />
+        <action
+            android:id="@+id/action_startScreenFragment_to_categoriesFragment"
+            app:destination="@id/categoriesFragment" />
+        <action
+            android:id="@+id/action_startScreenFragment_to_typesFragment"
+            app:destination="@id/typesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/furnitureDetailsFragment"
+        android:name="com.fazliddin.armebel.presentation.ui.details.FurnitureDetailsFragment"
+        android:label="FurnitureDetailsFragment">
+        <argument
+            android:name="furniture"
+            app:argType="com.fazliddin.armebel.data.remote.dto.BaseFurniture" />
+        <action
+            android:id="@+id/action_furnitureDetailsFragment_to_furnitureArFragment"
+            app:destination="@id/furnitureArFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/furnitureArFragment"
+        android:name="com.fazliddin.armebel.presentation.ui.ar.FurnitureArFragment"
+        android:label="FurnitureArFragment">
+        <argument
+            android:name="modelUri"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoriesFragment"
+        android:name="com.fazliddin.armebel.presentation.ui.categories.CategoriesFragment"
+        android:label="CategoriesFragment" >
+        <action
+            android:id="@+id/action_categoriesFragment_to_typesFragment"
+            app:destination="@id/typesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/typesFragment"
+        android:name="com.fazliddin.armebel.presentation.ui.types.TypesFragment"
+        android:label="TypesFragment">
+        <argument
+            android:name="categoryID"
+            app:argType="long" />
+        <action
+            android:id="@+id/action_typesFragment_to_furnitureDetailsFragment"
+            app:destination="@id/furnitureDetailsFragment" />
+        <action
+            android:id="@+id/action_typesFragment_to_furnitureByTypeFragment"
+            app:destination="@id/furnitureByTypeFragment" />
+        <action
+            android:id="@+id/action_typesFragment_to_allTypesFragment"
+            app:destination="@id/allTypesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/likedFurnitureFragment"
+        android:name="com.fazliddin.armebel.presentation.ui.likedfurniture.LikedFurnitureFragment"
+        android:label="LikedFurnitureFragment" >
+        <action
+            android:id="@+id/action_likedFurnitureFragment_to_furnitureDetailsFragment"
+            app:destination="@id/furnitureDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/furnitureByTypeFragment"
+        android:name="com.fazliddin.armebel.presentation.ui.furniturebytype.FurnitureByTypeFragment"
+        android:label="FurnitureByTypeFragment" >
+        <argument
+            android:name="typeId"
+            app:argType="long" />
+        <action
+            android:id="@+id/action_furnitureByTypeFragment_to_furnitureDetailsFragment"
+            app:destination="@id/furnitureDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.fazliddin.armebel.presentation.ui.register.RegisterFragment"
+        android:label="RegisterFragment" />
+    <fragment
+        android:id="@+id/allTypesFragment"
+        android:name="com.fazliddin.armebel.presentation.ui.alltypes.AllTypesFragment"
+        android:label="AllTypesFragment" >
+        <action
+            android:id="@+id/action_allTypesFragment_to_furnitureByTypeFragment"
+            app:destination="@id/furnitureByTypeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.fazliddin.armebel.presentation.ui.cart.CartFragment"
+        android:label="cartFragment" />
+</navigation>

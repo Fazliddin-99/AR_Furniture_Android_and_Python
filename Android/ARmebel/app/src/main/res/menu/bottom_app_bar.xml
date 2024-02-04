@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/startScreenFragment"
+        android:contentDescription="Asosiy qismga o'tish"
+        android:icon="@drawable/ic_home"
+        android:title="Asosiy" />
+
+    <item
+        android:id="@+id/likedFurnitureFragment"
+        android:contentDescription="Saqlangan mebellarni ko'rish"
+        android:icon="@drawable/ic_heart"
+        android:title="Saqlanganlar" />
+
+    <item
+        android:id="@+id/registerFragment"
+        android:contentDescription="Mening profilimni ko'rish"
+        android:icon="@drawable/ic_person"
+        android:title="Profilim" />
+
+<!--    <item-->
+<!--        android:id="@+id/nav_graph_settings"-->
+<!--        android:contentDescription="Sozlash"-->
+<!--        android:icon="@drawable/ic_settings"-->
+<!--        android:title="Sozlash" />-->
+</menu>
