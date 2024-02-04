@@ -10,6 +10,7 @@ The project contains of 2 parts: Android mobile app and Python based backend.
 * **Dagger Hilt** for dependency injection
 * **Retrofit** for http backend calls
 * **Room** database for caching data
+* **Coroutines** for asynchronous execution of the code
 * **Navigation Component**
 * **ARCore** and **Sceneform** for augmented reality and rendering models
 * **Fragments** for UI
